@@ -1,0 +1,18 @@
+{
+  "Parameters": {
+    "pGlueServiceRoleName": "AWS_Glue",
+    "pGlueJobName": "gulzee_mdm_to_rdm_migration",
+    "pGlueTriggerName": "gulzee_mdm_to_rdm_migration_ondemand",
+    "pGlueJobScriptlocation": "s3://gulzee-code/mdm-to-rdm/code/gulzee_mdm_to_rdm_migration.py",
+    "pGlueJobPythonLibPath": "s3://gulzee-code/mdm-to-rdm/config/rdmlibs.zip,s3://gulzee-code/mdm-to-rdm/config/loguru.zip",
+    "pParamsBucket": "gulzee-code",
+    "pParamsKey": "mdm-to-rdm/config/params-dev.json",
+    "pRDMConfigBucket": "gulzee-code",
+    "pRDMConfigKey": "rdm/edb_rdm_config/ingestion/MDIDS/mdids-clinical-reference-demo8/mdm/",
+    "pRDMFilesBucket": "gulzee-code",
+    "pRDMFilesKey": "rdm/MDIDS/mdids-clinical-reference-demo8/mdm/",
+    "pGlueJobMaxConcurrency": "1",
+    "pGlueJobWorkers": "2"
+  },
+  "StackPolicy": {}
+}

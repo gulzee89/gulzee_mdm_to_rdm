@@ -1,0 +1,38 @@
+Vocabulary Name,Vocabulary Description,Vocabulary Version,Mandatory Relationships,Concept Code Length,Concept Code Fixed Length
+Admin Route,Admin Route,1,Language; Standard,50,FALSE
+Blinding Type,Blinding Type,1,,40,FALSE
+Center,Center,1,Language; Standard,50,FALSE
+Clinical Study,Clinical Study,1,Facility; Research Project Code; Trial Number,40,FALSE
+Trial Number,Trial Number (Source Only),1,,48,FALSE
+Research Project Code,Research Project Code,1,Substance,40,FALSE
+Control Type,Control Type,1,,40,FALSE
+Country,Country (Source Only),1,,60,FALSE
+Country Group,Country Group,1,Language; Standard,50,FALSE
+Design Type,Design Type,1,,40,FALSE
+Disease State,Disease State,1,,110,FALSE
+Disease State Indication,Disease State Indication,1,Disease State; Indication,150,FALSE
+Dosage Form,Dosage Form,1,Language; Standard,50,FALSE
+Facility,Facility,1,Country; Language; Standard,50,FALSE
+Gender,Gender,1,Language; Standard,50,FALSE
+Generic Name Approving Agency,Generic Name Approving Agency,1,,40,FALSE
+Indication,Indication (Source Only),1,,40,FALSE
+Indication Group,Indication Group,1,Language; Standard,50,FALSE
+Indication Reference,Indication Reference,1,Indication Group; Language; Standard,50,FALSE
+Language,Language,1,,40,FALSE
+Milestone Classification,Milestone Classification,1,Milestone Usage; Milestone Type,200,FALSE
+Milestone Type,Milestone Type,1,,100,FALSE
+Milestone Usage,Milestone Usage (Source Only),1,,90,FALSE
+Non-Drug Compound,Non-Drug Compound,1,,40,FALSE
+Package Form,Package Form,1,Language; Standard,50,FALSE
+Portfolio Status,Portfolio Status,1,,40,FALSE
+Specialist,Specialist,1,Language; Standard,50,FALSE
+Standard,Standard,1,,30,FALSE
+State,State,1,Country; Language; Standard,50,FALSE
+Study Phase,Study Phase,1,,40,FALSE
+Substance,Substance,1,Substance Code Type; Portfolio Status,40,FALSE
+Substance Code Type,Substance Code Type,1,,40,FALSE
+Substance Extended Attribute Status,Substance Extended Attribute Status,1,,40,FALSE
+Substance Extended Attribute Type,Substance Extended Attribute Type,1,,40,FALSE
+Therapeutic Area,Therapeutic Area,1,,40,FALSE
+Unit Of Measure,Unit Of Measure,1,Language; Standard,50,FALSE
+Substance Extended Attribute,Substance Extended Attribute,1,Substance; Substance Extended Attribute Type,600,FALSE

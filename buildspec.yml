@@ -1,0 +1,64 @@
+version: 0.2
+phases:
+  install:
+    runtime-versions:
+      python: 3.7
+    commands:
+      - echo "Starting install - $(date)"
+
+      - echo "Installing library rdmlibs i.e ziping python functions"
+      - cd $CODEBUILD_SRC_DIR/lib
+      - zip -r rdmlibs.zip rdmlibs/
+
+      - echo "Installing python library loguru"
+      - pip install loguru -t $CODEBUILD_SRC_DIR/lib/
+      - cd $CODEBUILD_SRC_DIR/lib
+      - zip -r loguru.zip loguru/
+
+      - echo "Installing CloudFormation template linting tool cfn-lint"
+      - pip install cfn-lint
+      - echo "Completed install - $(date)"
+      - env_lower=$(echo $ENVIRONMENT|tr '[:upper:]' '[:lower:]')
+      - echo $env_lower
+  pre_build:
+    commands:
+      - echo "Starting pre_build - $(date)"
+
+      - echo "Linting CloudFormation template"
+      - cd $CODEBUILD_SRC_DIR
+
+      - cfn-lint --version
+      - cfn-lint --ignore-checks W3011 --append-rules $CODEBUILD_SRC_DIR_LintRules --template ${TEMPLATE_PATH}
+
+      - echo "Completed pre_build - $(date)"
+
+      - echo "Copying config and code files on S3 - $(date)"
+
+      - aws s3 cp $CODEBUILD_SRC_DIR/code/ s3://gulzee-code/mdm-to-rdm/code/ --recursive
+      - aws s3 cp $CODEBUILD_SRC_DIR/config/Queries/ s3://gulzee-code/mdm-to-rdm/config/Queries/ --recursive
+      - aws s3 cp $CODEBUILD_SRC_DIR/lib/loguru.zip s3://gulzee-code/mdm-to-rdm/config/
+      - aws s3 cp $CODEBUILD_SRC_DIR/lib/rdmlibs.zip s3://gulzee-code/mdm-to-rdm/config/
+      - aws s3 cp $CODEBUILD_SRC_DIR/config/Properties.csv s3://gulzee-code/mdm-to-rdm/config/
+      - aws s3 cp $CODEBUILD_SRC_DIR/config/Vocabularies.csv s3://gulzee-code/mdm-to-rdm/config/
+      - aws s3 cp $CODEBUILD_SRC_DIR/config/snow_config_${env_lower}.json s3://gulzee-code/mdm-to-rdm/config/
+      - aws s3 cp $CODEBUILD_SRC_DIR/config/params-${env_lower}.json s3://gulzee-code/mdm-to-rdm/config/
+
+      - echo "Files copied successfully on S3 - $(date)"
+  build:
+    commands:
+      - echo "Starting build - $(date)"
+
+      - sam build --template-file ${TEMPLATE_PATH}
+
+      - sam package --template-file .aws-sam/build/template.yaml --kms-key-id alias/aws/s3 --s3-bucket ${S3_DEPLOY_BUCKET} --output-template-file ${TEMPLATE_PATH}
+
+      - echo "Completed build - $(date)"
+  post_build:
+    commands:
+      - echo "Starting post_build - $(date)"
+      - echo "Completed post_build - $(date)"
+artifacts:
+  files:
+    - ${TEMPLATE_PATH}
+    - ${PARAMETER_FILE_NAME}
+  discard-paths: no

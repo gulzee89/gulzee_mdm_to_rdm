@@ -1,0 +1,314 @@
+{
+    "rdm-projectname": "mdids-clinical-reference-demo8",
+    "propertiesfilepath": "s3://lly-edp-codeconfig-us-east-2-dev/mdids-infohub/mdm-to-rdm-migration/config/Properties.csv",
+    "vocabulariesfilepath": "s3://lly-edp-codeconfig-us-east-2-dev/mdids-infohub/mdm-to-rdm-migration/config/Vocabularies.csv",
+    "generaterelationfile": "N",
+    "generatepropertyfile": "N",
+    "generatevocabularyfile": "N",
+    "generatedomainfile": "N",
+    "generatelanguagefile": "N",
+    "language": "EN",
+    "languagedesc": "English",
+    "domain": "Clinical",
+    "domaindesc": "Clinical Reference Data",
+    "system": "MDM",
+    "email-notifcation-list": ["agrawal_rohit@network.lilly.com"],
+    "vocabularies": [
+        {
+            "activeflag": "N",
+            "mdm-tablname": "c_lkp_stndrd",
+            "rdm-vocabularyname": "Standard",
+            "queryfilepath": "mdids-infohub/mdm-to-rdm-migration/config/Queries/Standard.sql",
+            "assocqueryfilepath": null,
+            "mdmsysnameflag": "N"
+        },
+        {
+            "activeflag": "N",
+            "mdm-tablname": "c_lkp_lang",
+            "rdm-vocabularyname": "Language",
+            "queryfilepath": "mdids-infohub/mdm-to-rdm-migration/config/Queries/Language.sql",
+            "assocqueryfilepath": null,
+            "mdmsysnameflag": "N"
+        },
+        {
+            "activeflag": "N",
+            "mdm-tablname": "c_lkp_cntry",
+            "rdm-vocabularyname": "Country",
+            "queryfilepath": "mdids-infohub/mdm-to-rdm-migration/config/Queries/Country.sql",
+            "assocqueryfilepath": null,
+            "mdmsysnameflag": "N"
+        },
+        {
+            "activeflag": "N",
+            "mdm-tablname": "c_lkp_sbstnce_cd_typ",
+            "rdm-vocabularyname": "Substance Code Type",
+            "queryfilepath": "mdids-infohub/mdm-to-rdm-migration/config/Queries/Substance Code Type.sql",
+            "assocqueryfilepath": null,
+            "mdmsysnameflag": "N"
+        },
+        {
+            "activeflag": "N",
+            "mdm-tablname": "c_lkp_prtflio_sts",
+            "rdm-vocabularyname": "Portfolio Status",
+            "queryfilepath": "mdids-infohub/mdm-to-rdm-migration/config/Queries/Portfolio Status.sql",
+            "assocqueryfilepath": null,
+            "mdmsysnameflag": "N"
+        },
+        {
+            "activeflag": "N",
+            "mdm-tablname": "c_bo_sbstnce",
+            "rdm-vocabularyname": "Substance",
+            "queryfilepath": "mdids-infohub/mdm-to-rdm-migration/config/Queries/Substance.sql",
+            "assocqueryfilepath": "mdids-infohub/mdm-to-rdm-migration/config/Queries/Substance-Assoc.sql",
+            "mdmsysnameflag": "N"
+        },
+        {
+            "activeflag": "N",
+            "mdm-tablname": "c_bo_cmpnd",
+            "rdm-vocabularyname": "Research Project Code",
+            "queryfilepath": "mdids-infohub/mdm-to-rdm-migration/config/Queries/Compound.sql",
+            "assocqueryfilepath": "mdids-infohub/mdm-to-rdm-migration/config/Queries/Compound-Assoc.sql",
+            "mdmsysnameflag": "N"
+        },
+        {
+            "activeflag": "N",
+            "mdm-tablname": "c_lkp_fclty",
+            "rdm-vocabularyname": "Facility",
+            "queryfilepath": "mdids-infohub/mdm-to-rdm-migration/config/Queries/Facility.sql",
+            "assocqueryfilepath": "mdids-infohub/mdm-to-rdm-migration/config/Queries/Facility-Assoc.sql",
+            "mdmsysnameflag": "Y"
+        },
+        {
+            "activeflag": "N",
+            "mdm-tablname": "c_bo_clncl_stdy",
+            "rdm-vocabularyname": "Clinical Study",
+            "queryfilepath": "mdids-infohub/mdm-to-rdm-migration/config/Queries/Study.sql",
+            "assocqueryfilepath": "mdids-infohub/mdm-to-rdm-migration/config/Queries/Study-Assoc.sql",
+            "mdmsysnameflag": "N"
+        },
+        {
+            "activeflag": "N",
+            "mdm-tablname": "c_lkp_state",
+            "rdm-vocabularyname": "State",
+            "queryfilepath": "mdids-infohub/mdm-to-rdm-migration/config/Queries/State.sql",
+            "assocqueryfilepath": "mdids-infohub/mdm-to-rdm-migration/config/Queries/State-Assoc.sql",
+            "mdmsysnameflag": "N"
+        },
+        {
+            "activeflag": "N",
+            "mdm-tablname": "c_lkp_uom",
+            "rdm-vocabularyname": "Unit Of Measure",
+            "queryfilepath": "mdids-infohub/mdm-to-rdm-migration/config/Queries/UOM.sql",
+            "assocqueryfilepath": "mdids-infohub/mdm-to-rdm-migration/config/Queries/UOM-Assoc.sql",
+            "mdmsysnameflag": "N"
+        },
+        {
+            "activeflag": "N",
+            "mdm-tablname": "c_lkp_blndng_typ",
+            "rdm-vocabularyname": "Blinding Type",
+            "queryfilepath": "mdids-infohub/mdm-to-rdm-migration/config/Queries/Blinding Type.sql",
+            "assocqueryfilepath": null,
+            "mdmsysnameflag": "N"
+        },
+        {
+            "activeflag": "N",
+            "mdm-tablname": "c_lkp_cntrl_typ",
+            "rdm-vocabularyname": "Control Type",
+            "queryfilepath": "mdids-infohub/mdm-to-rdm-migration/config/Queries/Control Type.sql",
+            "assocqueryfilepath": null,
+            "mdmsysnameflag": "N"
+        },
+        {
+            "activeflag": "N",
+            "mdm-tablname": "c_lkp_dsgn_typ",
+            "rdm-vocabularyname": "Design Type",
+            "queryfilepath": "mdids-infohub/mdm-to-rdm-migration/config/Queries/Design Type.sql",
+            "assocqueryfilepath": null,
+            "mdmsysnameflag": "N"
+        },
+        {
+            "activeflag": "N",
+            "mdm-tablname": "c_lkp_stdy_phse",
+            "rdm-vocabularyname": "Study Phase",
+            "queryfilepath": "mdids-infohub/mdm-to-rdm-migration/config/Queries/Study Phase.sql",
+            "assocqueryfilepath": null,
+            "mdmsysnameflag": "N"
+        },
+        {
+            "activeflag": "N",
+            "mdm-tablname": "c_lkp_thrptc_area",
+            "rdm-vocabularyname": "Therapeutic Area",
+            "queryfilepath": "mdids-infohub/mdm-to-rdm-migration/config/Queries/Therapeutic Area.sql",
+            "assocqueryfilepath": null,
+            "mdmsysnameflag": "N"
+        },
+        {
+            "activeflag": "N",
+            "mdm-tablname": "c_lkp_non_drg_cmpnd",
+            "rdm-vocabularyname": "Non-Drug Compound",
+            "queryfilepath": "mdids-infohub/mdm-to-rdm-migration/config/Queries/Non-Drug Compound.sql",
+            "assocqueryfilepath": null,
+            "mdmsysnameflag": "N"
+        },
+        {
+            "activeflag": "N",
+            "mdm-tablname": "c_lkp_mlstn",
+            "rdm-vocabularyname": "Milestone Usage",
+            "queryfilepath": "mdids-infohub/mdm-to-rdm-migration/config/Queries/Milestone Usage.sql",
+            "assocqueryfilepath": null,
+            "mdmsysnameflag": "N"
+        },
+        {
+            "activeflag": "N",
+            "mdm-tablname": "c_lkp_mlstn_typ",
+            "rdm-vocabularyname": "Milestone Type",
+            "queryfilepath": "mdids-infohub/mdm-to-rdm-migration/config/Queries/Milestone Type.sql",
+            "assocqueryfilepath": null,
+            "mdmsysnameflag": "N"
+        },
+        {
+            "activeflag": "N",
+            "mdm-tablname": "c_rel_mlstn_clsfctn",
+            "rdm-vocabularyname": "Milestone Classification",
+            "queryfilepath": "mdids-infohub/mdm-to-rdm-migration/config/Queries/Milestone Classification.sql",
+            "assocqueryfilepath": "mdids-infohub/mdm-to-rdm-migration/config/Queries/Milestone Classification-Assoc.sql",
+            "mdmsysnameflag": "N"
+        },
+        {
+            "activeflag": "N",
+            "mdm-tablname": "c_lkp_admn_route",
+            "rdm-vocabularyname": "Admin Route",
+            "queryfilepath": "mdids-infohub/mdm-to-rdm-migration/config/Queries/Admin Route.sql",
+            "assocqueryfilepath": "mdids-infohub/mdm-to-rdm-migration/config/Queries/Admin Route-Assoc.sql",
+            "mdmsysnameflag": "N"
+        },
+        {
+            "activeflag": "N",
+            "mdm-tablname": "c_lkp_indctn_grp",
+            "rdm-vocabularyname": "Indication Group",
+            "queryfilepath": "mdids-infohub/mdm-to-rdm-migration/config/Queries/Indication Group.sql",
+            "assocqueryfilepath": "mdids-infohub/mdm-to-rdm-migration/config/Queries/Indication Group-Assoc.sql",
+            "mdmsysnameflag": "N"
+        },
+        {
+            "activeflag": "N",
+            "mdm-tablname": "c_lkp_indctn_ref",
+            "rdm-vocabularyname": "Indication Reference",
+            "queryfilepath": "mdids-infohub/mdm-to-rdm-migration/config/Queries/Indication Reference.sql",
+            "assocqueryfilepath": "mdids-infohub/mdm-to-rdm-migration/config/Queries/Indication Reference-Assoc.sql",
+            "mdmsysnameflag": "N"
+        },
+        {
+            "activeflag": "N",
+            "mdm-tablname": "c_lkp_gndr",
+            "rdm-vocabularyname": "Gender",
+            "queryfilepath": "mdids-infohub/mdm-to-rdm-migration/config/Queries/Gender.sql",
+            "assocqueryfilepath": "mdids-infohub/mdm-to-rdm-migration/config/Queries/Gender-Assoc.sql",
+            "mdmsysnameflag": "N"
+        },
+        {
+            "activeflag": "N",
+            "mdm-tablname": "c_lkp_cntry_grp",
+            "rdm-vocabularyname": "Country Group",
+            "queryfilepath": "mdids-infohub/mdm-to-rdm-migration/config/Queries/Country Group.sql",
+            "assocqueryfilepath": "mdids-infohub/mdm-to-rdm-migration/config/Queries/Country Group-Assoc.sql",
+            "mdmsysnameflag": "N"
+        },
+        {
+            "activeflag": "N",
+            "mdm-tablname": "c_lkp_cntr",
+            "rdm-vocabularyname": "Center",
+            "queryfilepath": "mdids-infohub/mdm-to-rdm-migration/config/Queries/Center.sql",
+            "assocqueryfilepath": "mdids-infohub/mdm-to-rdm-migration/config/Queries/Center-Assoc.sql",
+            "mdmsysnameflag": "N"
+        },
+        {
+            "activeflag": "N",
+            "mdm-tablname": "c_lkp_spclst",
+            "rdm-vocabularyname": "Specialist",
+            "queryfilepath": "mdids-infohub/mdm-to-rdm-migration/config/Queries/Specialist.sql",
+            "assocqueryfilepath": "mdids-infohub/mdm-to-rdm-migration/config/Queries/Specialist-Assoc.sql",
+            "mdmsysnameflag": "N"
+        },
+        {
+            "activeflag": "N",
+            "mdm-tablname": "c_lkp_dsg_frm",
+            "rdm-vocabularyname": "Dosage Form",
+            "queryfilepath": "mdids-infohub/mdm-to-rdm-migration/config/Queries/Dosage Form.sql",
+            "assocqueryfilepath": "mdids-infohub/mdm-to-rdm-migration/config/Queries/Dosage Form-Assoc.sql",
+            "mdmsysnameflag": "N"
+        },
+        {
+            "activeflag": "N",
+            "mdm-tablname": "c_lkp_pkg_frm",
+            "rdm-vocabularyname": "Package Form",
+            "queryfilepath": "mdids-infohub/mdm-to-rdm-migration/config/Queries/Package Form.sql",
+            "assocqueryfilepath": "mdids-infohub/mdm-to-rdm-migration/config/Queries/Package Form-Assoc.sql",
+            "mdmsysnameflag": "N"
+        },
+        {
+            "activeflag": "N",
+            "mdm-tablname": "c_lkp_genrc_nm_app_agncy",
+            "rdm-vocabularyname": "Generic Name Approving Agency",
+            "queryfilepath": "mdids-infohub/mdm-to-rdm-migration/config/Queries/Generic Name Approving Agency.sql",
+            "assocqueryfilepath": null,
+            "mdmsysnameflag": "N"
+        },
+        {
+            "activeflag": "N",
+            "mdm-tablname": "c_lkp_sbstnc_ext_atr_typ",
+            "rdm-vocabularyname": "Substance Extended Attribute Type",
+            "queryfilepath": "mdids-infohub/mdm-to-rdm-migration/config/Queries/Substance Extended Attribute Type.sql",
+            "assocqueryfilepath": null,
+            "mdmsysnameflag": "N"
+        },
+        {
+            "activeflag": "N",
+            "mdm-tablname": "c_lkp_sbstnc_ext_atr_sts",
+            "rdm-vocabularyname": "Substance Extended Attribute Status",
+            "queryfilepath": "mdids-infohub/mdm-to-rdm-migration/config/Queries/Substance Extended Attribute Status.sql",
+            "assocqueryfilepath": null,
+            "mdmsysnameflag": "N"
+        },
+        {
+            "activeflag": "N",
+            "mdm-tablname": "c_lkp_indctn",
+            "rdm-vocabularyname": "Indication",
+            "queryfilepath": "mdids-infohub/mdm-to-rdm-migration/config/Queries/Indication.sql",
+            "assocqueryfilepath": null,
+            "mdmsysnameflag": "N"
+        },
+        {
+            "activeflag": "N",
+            "mdm-tablname": "c_lkp_disease",
+            "rdm-vocabularyname": "Disease State",
+            "queryfilepath": "mdids-infohub/mdm-to-rdm-migration/config/Queries/Disease State.sql",
+            "assocqueryfilepath": null,
+            "mdmsysnameflag": "N"
+        },
+        {
+            "activeflag": "N",
+            "mdm-tablname": "c_rel_disease_indctn",
+            "rdm-vocabularyname": "Disease State Indication",
+            "queryfilepath": "mdids-infohub/mdm-to-rdm-migration/config/Queries/Disease State Indication.sql",
+            "assocqueryfilepath": "mdids-infohub/mdm-to-rdm-migration/config/Queries/Disease State Indication-Assoc.sql",
+            "mdmsysnameflag": "N"
+        },
+        {
+            "activeflag": "N",
+            "mdm-tablname": "c_bo_sbstnce_extnd_attr",
+            "rdm-vocabularyname": "Substance Extended Attribute",
+            "queryfilepath": "mdids-infohub/mdm-to-rdm-migration/config/Queries/Substance Extended Attribute.sql",
+            "assocqueryfilepath": "mdids-infohub/mdm-to-rdm-migration/config/Queries/Substance Extended Attribute-Assoc.sql",
+            "mdmsysnameflag": "N"
+        },
+        {
+            "activeflag": "N",
+            "mdm-tablname": "c_lkp_clncl_stdy_nbr",
+            "rdm-vocabularyname": "Trial Number",
+            "queryfilepath": "mdids-infohub/mdm-to-rdm-migration/config/Queries/Trial Number.sql",
+            "assocqueryfilepath": null,
+            "mdmsysnameflag": "N"
+        }
+    ]
+}

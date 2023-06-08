@@ -1,0 +1,15 @@
+SELECT preferred_term_cd as "Concept Code",
+       preferred_term_name as "Concept Name",
+       preferred_term_soc_cd as "Preferred Term SOC Code",
+       preferred_term_whoart_cd as "Preferred Term WHOArt Code",
+       preferred_term_harts_cd as "Preferred Term HARTS Code",
+       preferred_term_icd9_cd as "Preferred Term ICD9 Code",
+       preferred_term_icdm9_cm_cd as "Preferred Term ICDM9 CM Code",
+       preferred_term_icd10_cd as "Preferred Term ICD10 Code",
+       preferred_term_jart_cd as "Preferred Term JART Code",
+       dscntnd_flg as "Discontinued Flag Y or N",
+       preferrd_trm_costart_symbl as "Preferred Term Costart Symbol",
+       CAST(meddra_vrsn_label AS VARCHAR(100)) as "MEDDRA Version Label",
+       indication_description as "Indication Description",
+       last_rowid_system as "System"
+FROM cmx_ors.c_lkp_indctn
