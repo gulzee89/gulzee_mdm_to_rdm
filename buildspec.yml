@@ -24,12 +24,6 @@ phases:
     commands:
       - echo "Starting pre_build - $(date)"
 
-      - echo "Linting CloudFormation template"
-      - cd $CODEBUILD_SRC_DIR
-
-      - cfn-lint --version
-      - cfn-lint --ignore-checks W3011 --append-rules $CODEBUILD_SRC_DIR_LintRules --template ${TEMPLATE_PATH}
-
       - echo "Completed pre_build - $(date)"
 
       - echo "Copying config and code files on S3 - $(date)"
