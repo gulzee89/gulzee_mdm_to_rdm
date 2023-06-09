@@ -41,9 +41,9 @@ phases:
     commands:
       - echo "Starting build - $(date)"
 
-      - sam build --template-file .aws-sam/build/template.yaml
+      - sam build --template-file template.yml
 
-      - sam package --template-file .aws-sam/build/template.yaml  --resolve-s3 
+      - sam package --template-file .aws-sam/build/template.yaml  --resolve-s3 --output-template-file template.yml
 
       - echo "Completed build - $(date)"
   post_build:
@@ -52,6 +52,6 @@ phases:
       - echo "Completed post_build - $(date)"
 artifacts:
   files:
-    - ${TEMPLATE_PATH}
-    - ${PARAMETER_FILE_NAME}
+    - template.yml
+    - params.dev.json
   discard-paths: no
