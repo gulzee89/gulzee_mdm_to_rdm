@@ -41,7 +41,7 @@ phases:
     commands:
       - echo "Starting build - $(date)"
 
-      - sam build --template-file template.yml
+      - sam build template.yml
 
       - sam package --template-file .aws-sam/build/template.yaml  --resolve-s3 --output-template-file template.yml
 
