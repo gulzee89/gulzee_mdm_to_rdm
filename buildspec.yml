@@ -41,9 +41,9 @@ phases:
     commands:
       - echo "Starting build - $(date)"
 
-      - sam build --template-file ${TEMPLATE_PATH}
+      - sam build
 
-      - sam package --template-file .aws-sam/build/template.yaml --kms-key-id alias/aws/s3 --s3-bucket ${S3_DEPLOY_BUCKET} --output-template-file ${TEMPLATE_PATH}
+      - sam package --template-file .aws-sam/build/template.yaml  --resolve-s3 
 
       - echo "Completed build - $(date)"
   post_build:
