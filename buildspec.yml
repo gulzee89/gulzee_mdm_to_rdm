@@ -34,8 +34,7 @@ phases:
       - aws s3 cp $CODEBUILD_SRC_DIR/lib/rdmlibs.zip s3://gulzee-code/mdm-to-rdm/config/
       - aws s3 cp $CODEBUILD_SRC_DIR/config/Properties.csv s3://gulzee-code/mdm-to-rdm/config/
       - aws s3 cp $CODEBUILD_SRC_DIR/config/Vocabularies.csv s3://gulzee-code/mdm-to-rdm/config/
-      - aws s3 cp $CODEBUILD_SRC_DIR/config/snow_config_${env_lower}.json s3://gulzee-code/mdm-to-rdm/config/
-      - aws s3 cp $CODEBUILD_SRC_DIR/config/params-${env_lower}.json s3://gulzee-code/mdm-to-rdm/config/
+      - aws s3 cp $CODEBUILD_SRC_DIR/config/params-dev.json s3://gulzee-code/mdm-to-rdm/config/
 
       - echo "Files copied successfully on S3 - $(date)"
   build:
