@@ -29,7 +29,7 @@ phases:
       - cd $CODEBUILD_SRC_DIR
 
       - cfn-lint --version
-      - cfn-lint --ignore-checks W3011 --append-rules $CODEBUILD_SRC_DIR_LintRules --template template.yml
+      - cfn-lint --ignore-checks W3011 --template template.yml
 
       - echo "Completed pre_build - $(date)"
 
