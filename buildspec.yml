@@ -20,6 +20,7 @@ phases:
       - echo "Completed install - $(date)"
       - env_lower=$(echo $ENVIRONMENT|tr '[:upper:]' '[:lower:]')
       - echo $env_lower
+      -cd ..
   pre_build:
     commands:
       - echo "Starting pre_build - $(date)"
