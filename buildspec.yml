@@ -28,6 +28,8 @@ phases:
 
       - echo "Copying config and code files on S3 - $(date)"
 
+      - echo $CODEBUILD_SRC_DIR
+
       - aws s3 cp $CODEBUILD_SRC_DIR/code/ s3://gulzee-code/mdm-to-rdm/code/ --recursive
       - aws s3 cp $CODEBUILD_SRC_DIR/config/Queries/ s3://gulzee-code/mdm-to-rdm/config/Queries/ --recursive
       - aws s3 cp $CODEBUILD_SRC_DIR/lib/loguru.zip s3://gulzee-code/mdm-to-rdm/config/
@@ -41,7 +43,7 @@ phases:
     commands:
       - echo "Starting build - $(date)"
 
-      - sam build template.yml
+      - sam build --template-file template.yml
 
       - sam package --template-file .aws-sam/build/template.yaml  --resolve-s3 --output-template-file template.yml
 
